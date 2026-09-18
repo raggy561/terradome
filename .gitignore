@@ -1,0 +1,25 @@
+# ---- Terraform state (secrets in plaintext — NEVER commit) ----
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
+
+# ---- Variable files (your IP, keys, passwords live here) ----
+*.tfvars
+*.tfvars.json
+
+# ---- Provider plugins / cache (huge, can hold backend creds) ----
+.terraform/
+
+# ---- Crash logs ----
+crash.log
+crash.*.log
+
+# ---- Secrets & keys ----
+.env
+*.pem
+
+# ---- OS junk ----
+.DS_Store
+
+# ---- Deliberate exception: DO commit the lock file ----
+# .terraform.lock.hcl is NOT ignored — it pins provider
